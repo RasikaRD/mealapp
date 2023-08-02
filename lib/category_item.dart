@@ -11,11 +11,12 @@ class CtegoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15),
-      
       decoration:  ShapeDecoration(
           color: color,
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(15)))),
+      child: Text(title,
+      style: Theme.of(context).textTheme.titleMedium,),
       // decoration: BoxDecoration(
       //   gradient: LinearGradient(
       //     colors: [color.withOpacity(0.7)],
@@ -24,7 +25,7 @@ class CtegoryItem extends StatelessWidget {
       //   ),
       //   borderRadius: BorderRadius.circular(15),
       // ),
-      child: Text(title),
+      // child: Text(title),
     );
   }
 }
