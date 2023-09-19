@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/categories_screen.dart';
-import 'package:mealapp/category_meals_screen.dart';
+import 'package:mealapp/screens/categories_screen.dart';
+import 'package:mealapp/screens/category_meals_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,24 +12,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MealApp',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: 'OpenSans',
-        textTheme: ThemeData.light().textTheme.copyWith(
-          displayLarge: const TextStyle(color: Colors.black),
-          titleSmall:const TextStyle(color: Colors.amber),
-          bodyLarge: const TextStyle(color: Colors.pink),
-          titleMedium: const TextStyle(
-            fontFamily: 'Quicksand',
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
-          )
-        )
-      ),
-      // home: const CategoriesScreen(),
-      initialRoute: '/',
-      routes: {
-        '/':(ctx) => const CategoriesScreen(),
-        '/category-meals': (ctx) => const CategoryMealsScreen(),      },
+          primarySwatch: Colors.deepPurple,
+          fontFamily: 'OpenSans',
+          textTheme: ThemeData.light().textTheme.copyWith(
+              displayLarge: const TextStyle(color: Colors.black),
+              titleSmall: const TextStyle(color: Colors.amber),
+              bodyLarge: const TextStyle(color: Colors.pink),
+              titleMedium: const TextStyle(
+                fontFamily: 'Quicksand',
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+              ))),
+      home: const CategoriesScreen(),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (ctx) => const CategoriesScreen(),
+      //   '/category-meals': (ctx) => const CategoryMealsScreen(
+      //         title: '',
+      //         meals: [],
+      //       ),
+      // },
     );
   }
 }

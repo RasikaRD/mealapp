@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import './models/category.dart';
 import './models/meal.dart';
 
-const dummyCategorise = [
+const availableCategories  = [
   Category(
     id: 'c1',
     title: 'Italian',
@@ -56,7 +56,7 @@ const dummyCategorise = [
   ),
 ];
 
-  const DUMMY_MEALS =   [
+  const dummyMeals  =   [
   Meal(
     id: 'm1',
     categories: [
@@ -67,7 +67,7 @@ const dummyCategorise = [
     affordability: Affordability.Affordable,
     complexity: Complexity.Simple,
     imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
     duration: 20,
     ingredients: [
       '4 Tomatoes',
