@@ -89,16 +89,6 @@ class MealItem extends StatelessWidget {
                       )
                     ]),
                   )),
-              // ClipRRect(
-              //   borderRadius:  BorderRadius.circular(15),
-              //   child: Image.network(
-              //     imageUrl,
-              //     height: 200,
-              //     width: double.infinity,
-              //     fit: BoxFit.cover,
-              //     scale: 1.0,
-              //   ),
-              // ),
             ],
           ),
         ]),

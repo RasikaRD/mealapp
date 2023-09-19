@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/screens/categories_screen.dart';
-import 'package:mealapp/screens/category_meals_screen.dart';
+import 'package:mealapp/screens/tabs.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MealApp',
       theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            brightness: Brightness.dark,
+            seedColor: const Color.fromARGB(31, 88, 17, 17),
+          ),
           fontFamily: 'OpenSans',
           textTheme: ThemeData.light().textTheme.copyWith(
               displayLarge: const TextStyle(color: Colors.black),
@@ -23,34 +26,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
               ))),
-      home: const CategoriesScreen(),
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (ctx) => const CategoriesScreen(),
-      //   '/category-meals': (ctx) => const CategoryMealsScreen(
-      //         title: '',
-      //         meals: [],
-      //       ),
-      // },
+      home: const TabsScreen(),
     );
   }
 }
-
-// class MyHomePage extends StatefulWidget {
-//   const MyHomePage({super.key});
-//   @override
-//   _MyHomePageState createState() => _MyHomePageState();
-   
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Meal App'),
-//       ),
-//       body: const Center(child: Text('Navigation Time')),
-//     );
-//   }
-// }

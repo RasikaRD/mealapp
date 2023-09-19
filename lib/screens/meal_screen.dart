@@ -3,19 +3,27 @@ import 'package:mealapp/models/meal.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealScreen extends StatelessWidget {
-  const MealScreen({super.key, required this.meal});
-  // final String mealTitle;
-  // final String image;
+  const MealScreen(
+      {super.key, required this.meal, required this.onToggleFavorite});
 
   final Meal meal;
+  final void Function(Meal meal) onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black12,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.black12,
         title: Text(meal.title),
+        actions: [
+          IconButton(
+              onPressed: () {
+                onToggleFavorite(meal);
+              },
+              
+              icon: const Icon(Icons.favorite_border_outlined))
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
